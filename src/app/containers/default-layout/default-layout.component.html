@@ -43,11 +43,11 @@
           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-user"></use>
         </svg> User Profile</a>
             <ul class="c-sidebar-nav-dropdown-items">
-                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" routerLink="/user-profile/editMyProfile"><span class="c-sidebar-nav-icon"></span>Edit My Profile</a></li>
-                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" routerLink="/user-profile/manageMySoldTos"><span class="c-sidebar-nav-icon"></span>Manage My Sold Tos</a></li>
+                <li class="c-sidebar-nav-item" [ngClass]="editMyProfile.isActive ? 'c-active-link':''"><a class="c-sidebar-nav-link" [routerLinkActive]="['']" #editMyProfile="routerLinkActive" [routerLinkActiveOptions]="{exact: true}" routerLink="/user-profile/editMyProfile"><span class="c-sidebar-nav-icon"></span>Edit My Profile</a></li>
+                <li class="c-sidebar-nav-item" [ngClass]="manageMySoldTos.isActive ? 'c-active-link':''"><a class="c-sidebar-nav-link" [routerLinkActive]="['']" #manageMySoldTos="routerLinkActive" [routerLinkActiveOptions]="{exact: true}" routerLink="/user-profile/manageMySoldTos"><span class="c-sidebar-nav-icon"></span>Manage My Sold Tos</a></li>
                 <!-- <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" routerLink="/user-profile/linkCustAssoc"><span class="c-sidebar-nav-icon"></span>Link ID - Customer ID Association</a></li> -->
-                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" routerLink="/user-profile/eNotification"><span class="c-sidebar-nav-icon"></span>E Notification</a></li>
-                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" routerLink="/user-profile/pushNotification"><span class="c-sidebar-nav-icon"></span>Push Notification</a></li>
+                <li class="c-sidebar-nav-item" [ngClass]="linkCustAssoc.isActive ? 'c-active-link':''"><a class="c-sidebar-nav-link" [routerLinkActive]="['']" #linkCustAssoc="routerLinkActive" [routerLinkActiveOptions]="{exact: true}" routerLink="/user-profile/eNotification"><span class="c-sidebar-nav-icon"></span>E Notification</a></li>
+                <li class="c-sidebar-nav-item" [ngClass]="eNotification.isActive ? 'c-active-link':''"><a class="c-sidebar-nav-link" [routerLinkActive]="['']" #eNotification="routerLinkActive" [routerLinkActiveOptions]="{exact: true}" routerLink="/user-profile/pushNotification"><span class="c-sidebar-nav-icon"></span>Push Notification</a></li>
             </ul>
         </li>
         <li class="c-sidebar-nav-item c-sidebar-nav-dropdown">
