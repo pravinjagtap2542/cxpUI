@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row">
-        <div class="col">
-            <div class="card bg-light mb-3">
+        <div class="col-md-5">
+            <!-- <div class="card bg-light mb-3">
                 <div class="card-header align-middle">INFORMATION</div>
                 <div class="card-body">
                     <ul class="list-group">
@@ -19,11 +19,67 @@
                         </li>
                     </ul>
                 </div>
+            </div> -->
+            <div class="form-group">
+                <fieldset class="the-fieldset userDetailsTable">
+                    <legend class="the-legend">Information</legend>
+                    <p><span>Name:</span> Jimmy Austin</p>
+                    <p><span>Company:</span> ABC</p>
+                    <p><span>User Name:</span> Dkodrani</p>
+                    <p><span>User Id:</span> Dhawal@123</p>
+                </fieldset>
             </div>
         </div>
-        <div class="col">
-
-            <div class="card bg-light mb-3">
+        <div class="col-md-7 tabdetails">
+            <div class="form-group tab">
+                <fieldset class="the-fieldset userDetailsTable">
+                    <legend class="the-legend">Tool Box</legend>
+                    <button class="tablinks" (click)="openCity($event, 'EditContactInformation')" id="defaultOpen"><i class="cis-chevron-right"></i>Edit Contact Information</button>
+                    <button class="tablinks" (click)="openCity($event, 'EditAddressInformation')"><i class="cis-chevron-right"></i>Edit Address Information</button>
+                    <button class="tablinks" (click)="openCity($event, 'viewRequestRoles')"><i class="cis-chevron-right"></i>View/Request Roles</button>
+                </fieldset>
+              </div>
+              
+              <div id="EditContactInformation" class="tabcontent">
+                <form action="#">
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                
+                    <label for="country">Country</label>
+                    <select id="country" name="country">
+                      <option value="australia">Australia</option>
+                      <option value="canada">Canada</option>
+                      <option value="usa">USA</option>
+                    </select>
+                    <button class="formButton">Cancle</button>
+                    <button class="formButton SaveBtn">Save</button>
+                  </form>
+              </div>
+              
+              <div id="EditAddressInformation" class="tabcontent">
+                <h3>Paris</h3>
+                <p>Paris is the capital of France.</p> 
+              </div>
+              
+              <div id="viewRequestRoles" class="tabcontent">
+                <h3>Tokyo</h3>
+                <p>Tokyo is the capital of Japan.</p>
+              </div>
+              
+            <!-- <div class="row">
+                <div class="col-md-6">      
+                    <div class="form-group">
+                        <fieldset class="the-fieldset userDetailsTable">
+                            <legend class="the-legend">Tool Box</legend>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="col-md-6"></div>
+            </div> -->
+            <!-- <div class="card bg-light mb-3">
                 <div class="card-header align-middle">TOOLBOX</div>
                 <div class="card-body">
                     <div class="accordion" id="accordionExample">
@@ -94,7 +150,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </div>

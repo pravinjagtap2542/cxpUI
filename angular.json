@@ -36,7 +36,8 @@
             "scripts": [
               "node_modules/chart.js/dist/Chart.min.js",
               "src/vendors/@coreui/icons/js/svgxuse.min.js",
-              "src/vendors/@coreui/coreui/js/coreui.bundle.min.js"
+              "src/vendors/@coreui/coreui/js/coreui.bundle.min.js",
+              "node_modules/jquery/dist/jquery.min.js"
             ]
           },
           "configurations": {
