@@ -44,7 +44,7 @@ fieldset.the-fieldset.userDetailsTable p span {
     background-color: inherit;
     color: grey;
     // padding: 22px 16px;
-    padding: 15px 10px;
+    padding: 15px 8px;
     width: 100%;
     border: none;
     outline: none;
@@ -53,7 +53,7 @@ fieldset.the-fieldset.userDetailsTable p span {
     transition: 0.3s;
     font-size: 13px;
     font-weight: 500;
-    font-style: italic;
+    // font-style: italic;
 }
 
 
@@ -69,6 +69,7 @@ fieldset.the-fieldset.userDetailsTable p span {
 .tab button.active {
     background-color: grey;
     color: #fff;
+    font-style: italic;
 }
 
 
@@ -142,7 +143,14 @@ fieldset.the-fieldset.userDetailsTable p span {
 .the-fieldset {
     height: 100%;
 }
-
+i.fa.fa-check {
+  /* font-size: 13px; */
+  margin-right: 4px;
+  color: #d11a0d;
+}
+.tab button.active i.fa.fa-check {
+  color: #ffffff;
+}
 @media only screen and (max-width: 1199px) {
   .tabdetails {
       margin: 15px 0;

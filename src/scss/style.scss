@@ -17562,3 +17562,17 @@ li.c-active-link {
     color: #fff;
     background: none;
 }
+
+li.c-header-nav-item.dropdown .c-avatar svg {
+    margin-right: 0 !important;
+    position: absolute;
+    right: 0;
+}
+header button.c-header-toggler.c-class-toggler {
+    color: #fff;
+}
+@media only screen and (max-width: 767px) {
+    li.c-header-nav-item.dropdown .c-avatar svg {
+        right: -10px;
+    }
+  }
