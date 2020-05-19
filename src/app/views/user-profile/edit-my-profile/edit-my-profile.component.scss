@@ -11,28 +11,35 @@
     color: #fff;
     text-transform: uppercase;
 }
+
 .the-fieldset {
     border: 2px solid grey;
     padding: 10px;
 }
+
 fieldset.the-fieldset.userDetailsTable p {
     color: #000;
 }
+
 fieldset.the-fieldset.userDetailsTable p span {
     color: grey;
 }
 
+
 /* Style the tab */
+
 .tab {
     float: left;
     // border: 1px solid #ccc;
     // background-color: #f1f1f1;
     width: 30%;
     height: 300px;
-  }
-  
-  /* Style the buttons inside the tab */
-  .tab button {
+}
+
+
+/* Style the buttons inside the tab */
+
+.tab button {
     display: block;
     background-color: inherit;
     color: grey;
@@ -47,21 +54,27 @@ fieldset.the-fieldset.userDetailsTable p span {
     font-size: 13px;
     font-weight: 500;
     font-style: italic;
-  }
-  
-  /* Change background color of buttons on hover */
-  .tab button:hover {
+}
+
+
+/* Change background color of buttons on hover */
+
+.tab button:hover {
     background-color: #ddd;
-  }
-  
-  /* Create an active/current "tab button" class */
-  .tab button.active {
+}
+
+
+/* Create an active/current "tab button" class */
+
+.tab button.active {
     background-color: grey;
     color: #fff;
 }
-  
-  /* Style the tab content */
-  .tabcontent {
+
+
+/* Style the tab content */
+
+.tabcontent {
     float: left;
     padding: 0px 12px;
     // border: 1px solid #ccc;
@@ -70,63 +83,74 @@ fieldset.the-fieldset.userDetailsTable p span {
     height: 300px;
     width: 68%;
     margin-left: 2%;
-  }
-  .tabdetails {
+}
+
+.tabdetails {
     .the-fieldset {
         padding: 10px 0;
     }
     legend.the-legend {
         margin: 0px 10px;
     }
-
     // Form Style css
-.tabcontent{
-    margin-top: 10px;
-    background-color: grey;
-    padding: 15px;
-    color: #fff;
-    height: auto;
-    input[type=text], select {
-        width: 100%;
-        padding: 5px 20px;
-        margin: 8px 0;
-        display: inline-block;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
-      }
-      
-      input[type=submit] {
-        width: 100%;
-        background-color: #4CAF50;
-        color: white;
-        padding: 14px 20px;
-        margin: 8px 0;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-      }
-      
-      input[type=submit]:hover {
-        background-color: #45a049;
-      }
-      form label {
-        margin-bottom: 0;
-      }
-      button.formButton {
-        background: #5d5d5d;
-        border: none;
+    .tabcontent {
+        margin-top: 10px;
+        background-color: grey;
+        padding: 15px;
         color: #fff;
-        padding: 4px 10px;
-        margin-top: 12px;
-      }
-      button.SaveBtn{
-          background-color: #d11a0d;
-      }
+        height: auto;
+        input[type=text],
+        select {
+            width: 100%;
+            padding: 5px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type=submit] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+        form label {
+            margin-bottom: 0;
+        }
+        button.formButton {
+            background: #5d5d5d;
+            border: none;
+            color: #fff;
+            padding: 4px 10px;
+            margin-top: 12px;
+        }
+        button.SaveBtn {
+            background-color: #d11a0d;
+        }
     }
 }
-.form-group,.the-fieldset {
+
+.form-group,
+.the-fieldset {
     height: 100%;
+}
+
+@media only screen and (max-width: 767px) {
+    .tabdetails {
+        margin: 15px 0;
+    }
+    .form-group,
+    .the-fieldset {
+        height: auto;
+    }
 }
 
 @media only screen and (max-width: 410px) {
