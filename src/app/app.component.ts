@@ -1,20 +1,39 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, NavigationEnd } from '@angular/router';
+import { Router, Event, NavigationStart, NavigationEnd, NavigationError, ActivatedRoute, RoutesRecognized } from '@angular/router';
+import { Title, Meta } from '@angular/platform-browser';
+import { filter } from 'rxjs/operators';
+import { map, startWith, pairwise } from 'rxjs/operators';
+import { from, Observable } from 'rxjs';
+import { mergeMap } from 'rxjs/operators';
 
 @Component({
-  // tslint:disable-next-line
   selector: 'body',
-  template: '<router-outlet></router-outlet>'
+  templateUrl: './app.component.html'
 })
 export class AppComponent implements OnInit {
-  constructor(private router: Router) { }
+  firstRoute: any;
+  secondRoute: any;
+
+  constructor(private titleService: Title, private metaService: Meta, private router: Router, private activatedRoute: ActivatedRoute) {
+  }
 
   ngOnInit() {
-    this.router.events.subscribe((evt) => {
-      if (!(evt instanceof NavigationEnd)) {
-        return;
-      }
-      window.scrollTo(0, 0);
-    });
+    this.router.events
+    .pipe(
+      startWith(new NavigationEnd(0, '/', '/')),
+      filter(e => e instanceof NavigationEnd),
+      pairwise(),
+      map(() => this.activatedRoute),
+      map((route) => {
+          this.firstRoute = route.firstChild.snapshot.data.title;
+          while (route.firstChild) {
+            route = route.firstChild;
+          }
+          return route;
+      }),
+      mergeMap((route) => route.data))
+      .subscribe((event) => {
+         this.secondRoute = event.title;
+      });
   }
 }
