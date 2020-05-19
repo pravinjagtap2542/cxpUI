@@ -10552,7 +10552,7 @@ html:not([dir="rtl"]) .c-sidebar.c-sidebar-show.c-sidebar-right {
 }
 
 .c-sidebar.c-sidebar-minimized .c-sidebar-nav>.c-sidebar-nav-dropdown:hover {
-    background: #321fdb;
+    background: #303c50;
 }
 
 .c-sidebar.c-sidebar-light {
@@ -17568,11 +17568,13 @@ li.c-header-nav-item.dropdown .c-avatar svg {
     position: absolute;
     right: 0;
 }
+
 header button.c-header-toggler.c-class-toggler {
     color: #fff;
 }
+
 @media only screen and (max-width: 767px) {
     li.c-header-nav-item.dropdown .c-avatar svg {
         right: -10px;
     }
-  }
+}

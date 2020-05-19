@@ -4,11 +4,11 @@
         <img class="c-sidebar-brand-minimized" src="./assets/img/brand/avaya-logo-white.svg" width="46" height="46" alt="AVAYA Logo" />
     </div>
     <ul class="c-sidebar-nav">
-        <li class="c-sidebar-nav-item c-sidebar-nav-dropdown">
-            <a class="c-sidebar-nav-link c-sidebar-nav-dropdown-toggle" href="#">
+        <li class="c-sidebar-nav-dropdown">
+            <a class="c-sidebar-nav-dropdown-toggle" href="#">
                 <svg class="c-sidebar-nav-icon">
-          <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-user"></use>
-        </svg> User Profile</a>
+                  <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-user"></use>
+                </svg> User Profile</a>
             <ul class="c-sidebar-nav-dropdown-items">
                 <li class="c-sidebar-nav-item" [ngClass]="editMyProfile.isActive ? 'c-active-link':''"><a class="c-sidebar-nav-link" [routerLinkActive]="['']" #editMyProfile="routerLinkActive" [routerLinkActiveOptions]="{exact: true}" routerLink="/user-profile/editMyProfile"><span class="c-sidebar-nav-icon"></span>Edit My Profile</a></li>
                 <li class="c-sidebar-nav-item" [ngClass]="manageMySoldTos.isActive ? 'c-active-link':''"><a class="c-sidebar-nav-link" [routerLinkActive]="['']" #manageMySoldTos="routerLinkActive" [routerLinkActiveOptions]="{exact: true}" routerLink="/user-profile/manageMySoldTos"><span class="c-sidebar-nav-icon"></span>Manage My Sold Tos</a></li>
@@ -17,37 +17,37 @@
                 <li class="c-sidebar-nav-item" [ngClass]="eNotification.isActive ? 'c-active-link':''"><a class="c-sidebar-nav-link" [routerLinkActive]="['']" #eNotification="routerLinkActive" [routerLinkActiveOptions]="{exact: true}" routerLink="/user-profile/pushNotification"><span class="c-sidebar-nav-icon"></span>Push Notification</a></li>
             </ul>
         </li>
-        <li class="c-sidebar-nav-item c-sidebar-nav-dropdown">
-            <a class="c-sidebar-nav-link c-sidebar-nav-dropdown-toggle" href="#">
+        <li class="c-sidebar-nav-dropdown">
+            <a class="c-sidebar-nav-dropdown-toggle" href="#">
                 <svg class="c-sidebar-nav-icon">
-          <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-cursor"></use>
-        </svg> User Management</a>
+                  <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-cursor"></use>
+                </svg> User Management</a>
             <ul class="c-sidebar-nav-dropdown-items">
-                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" routerLink="/user-management/requestApproval"><span class="c-sidebar-nav-icon"></span>Approval Request</a></li>
-                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" routerLink="/user-management/newUserRegistration"><span class="c-sidebar-nav-icon"></span>Register New USer</a></li>
+                <li class="c-sidebar-nav-item" [ngClass]="requestApproval.isActive ? 'c-active-link':''"><a class="c-sidebar-nav-link" [routerLinkActive]="['']" #requestApproval="routerLinkActive" [routerLinkActiveOptions]="{exact: true}" routerLink="/user-management/requestApproval"><span class="c-sidebar-nav-icon"></span>Approval Request</a></li>
+                <li class="c-sidebar-nav-item" [ngClass]="newUserRegistration.isActive ? 'c-active-link':''"><a class="c-sidebar-nav-link" [routerLinkActive]="['']" #newUserRegistration="routerLinkActive" [routerLinkActiveOptions]="{exact: true}" routerLink="/user-management/newUserRegistration"><span class="c-sidebar-nav-icon"></span>Register New USer</a></li>
             </ul>
         </li>
         <li class="c-sidebar-nav-dropdown">
             <a class="c-sidebar-nav-dropdown-toggle" href="#">
                 <svg class="c-sidebar-nav-icon">
-          <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-star"></use>
-        </svg> Search</a>
+                  <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-star"></use>
+                </svg> Search</a>
             <ul class="c-sidebar-nav-dropdown-items">
-                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" routerLink="/search/searchUsers">Users</a></li>
-                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" routerLink="/search/searchCompany">Companies</a></li>
+                <li class="c-sidebar-nav-item" [ngClass]="searchUsers.isActive ? 'c-active-link':''"><a class="c-sidebar-nav-link" [routerLinkActive]="['']" #searchUsers="routerLinkActive" [routerLinkActiveOptions]="{exact: true}" routerLink="/search/searchUsers">Users</a></li>
+                <li class="c-sidebar-nav-item" [ngClass]="searchCompany.isActive ? 'c-active-link':''"><a class="c-sidebar-nav-link" [routerLinkActive]="['']" #searchCompany="routerLinkActive" [routerLinkActiveOptions]="{exact: true}" routerLink="/search/searchCompany">Companies</a></li>
             </ul>
         </li>
-        <li class="c-sidebar-nav-item c-sidebar-nav-dropdown">
-            <a class="c-sidebar-nav-link c-sidebar-nav-dropdown-toggle" href="#">
+        <li class="c-sidebar-nav-dropdown">
+            <a class="c-sidebar-nav-dropdown-toggle" href="#">
                 <svg class="c-sidebar-nav-icon">
-          <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-settings"></use>
-        </svg> Tools</a>
+                  <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-settings"></use>
+                </svg> Tools</a>
             <ul class="c-sidebar-nav-dropdown-items">
-                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" routerLink="/tools/soldtoUsersAssoc"><span class="c-sidebar-nav-icon"></span>SoldTo Users Association</a></li>
-                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" routerLink="/tools/soldtoLinkIdAssoc"><span class="c-sidebar-nav-icon"></span>SoldTo Link ID Association</a></li>
-                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" routerLink="/tools/soldToAssoc"><span class="c-sidebar-nav-icon"></span>Delete SoldTo Association</a></li>
-                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" routerLink="/tools/soldToUsersTrans"><span class="c-sidebar-nav-icon"></span>Copy SoldTos - Users</a></li>
-                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" routerLink="/tools/soldToLinkIdTrans"><span class="c-sidebar-nav-icon"></span>Copy SoldTos - Link IDS</a></li>
+                <li class="c-sidebar-nav-item" [ngClass]="soldtoUsersAssoc.isActive ? 'c-active-link':''"><a class="c-sidebar-nav-link" [routerLinkActive]="['']" #soldtoUsersAssoc="routerLinkActive" [routerLinkActiveOptions]="{exact: true}" routerLink="/tools/soldtoUsersAssoc"><span class="c-sidebar-nav-icon"></span>SoldTo Users Association</a></li>
+                <li class="c-sidebar-nav-item" [ngClass]="soldtoLinkIdAssoc.isActive ? 'c-active-link':''"><a class="c-sidebar-nav-link" [routerLinkActive]="['']" #soldtoLinkIdAssoc="routerLinkActive" [routerLinkActiveOptions]="{exact: true}" routerLink="/tools/soldtoLinkIdAssoc"><span class="c-sidebar-nav-icon"></span>SoldTo Link ID Association</a></li>
+                <li class="c-sidebar-nav-item" [ngClass]="soldToAssoc.isActive ? 'c-active-link':''"><a class="c-sidebar-nav-link" [routerLinkActive]="['']" #soldToAssoc="routerLinkActive" [routerLinkActiveOptions]="{exact: true}" routerLink="/tools/soldToAssoc"><span class="c-sidebar-nav-icon"></span>Delete SoldTo Association</a></li>
+                <li class="c-sidebar-nav-item" [ngClass]="soldToUsersTrans.isActive ? 'c-active-link':''"><a class="c-sidebar-nav-link" [routerLinkActive]="['']" #soldToUsersTrans="routerLinkActive" [routerLinkActiveOptions]="{exact: true}" routerLink="/tools/soldToUsersTrans"><span class="c-sidebar-nav-icon"></span>Copy SoldTos - Users</a></li>
+                <li class="c-sidebar-nav-item" [ngClass]="soldToLinkIdTrans.isActive ? 'c-active-link':''"><a class="c-sidebar-nav-link" [routerLinkActive]="['']" #soldToLinkIdTrans="routerLinkActive" [routerLinkActiveOptions]="{exact: true}" routerLink="/tools/soldToLinkIdTrans"><span class="c-sidebar-nav-icon"></span>Copy SoldTos - Link IDS</a></li>
             </ul>
         </li>
         <li class="c-sidebar-nav-divider"></li>
