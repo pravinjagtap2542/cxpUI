@@ -39,7 +39,7 @@ fieldset.the-fieldset.userDetailsTable p span {
 
 /* Style the buttons inside the tab */
 
-.tab button {
+.tab a {
     display: block;
     background-color: inherit;
     color: grey;
@@ -59,17 +59,17 @@ fieldset.the-fieldset.userDetailsTable p span {
 
 /* Change background color of buttons on hover */
 
-.tab button:hover {
+.tab a:hover {
     background-color: #ddd;
 }
 
 
 /* Create an active/current "tab button" class */
 
-.tab button.active {
-    background-color: grey;
-    color: #fff;
-    font-style: italic;
+.activeTab {
+    background-color: grey !important;
+    color: #fff !important;
+    font-style: italic !important;
 }
 
 
@@ -84,6 +84,47 @@ fieldset.the-fieldset.userDetailsTable p span {
     height: 300px;
     width: 68%;
     margin-left: 2%;
+}
+
+.form-group,
+.the-fieldset {
+    height: 100%;
+}
+
+i.fa.fa-check {
+    /* font-size: 13px; */
+    margin-right: 4px;
+    color: #d11a0d;
+}
+
+.tab a.active i.fa.fa-check {
+    color: #ffffff;
+}
+
+@media only screen and (max-width: 1199px) {
+    .tabdetails {
+        margin: 15px 0;
+    }
+}
+
+@media only screen and (max-width: 410px) {
+    .tabdetails {
+        margin: 0px 0;
+        margin-bottom: 20px;
+    }
+    .tab {
+        float: none;
+        width: 100%;
+        height: 300px;
+        height: auto;
+        margin-top: 20px;
+        margin-bottom: 0px;
+    }
+    .tabdetails .tabcontent {
+        width: 100%;
+        float: none;
+        margin-left: 0;
+    }
 }
 
 .tabdetails {
@@ -139,40 +180,6 @@ fieldset.the-fieldset.userDetailsTable p span {
     }
 }
 
-.form-group,
-.the-fieldset {
-    height: 100%;
-}
-i.fa.fa-check {
-  /* font-size: 13px; */
-  margin-right: 4px;
-  color: #d11a0d;
-}
-.tab button.active i.fa.fa-check {
-  color: #ffffff;
-}
-@media only screen and (max-width: 1199px) {
-  .tabdetails {
-      margin: 15px 0;
-  }
-}
-
-@media only screen and (max-width: 410px) {
-  .tabdetails {
-      margin: 0px 0;
-      margin-bottom: 20px;
-  }
-    .tab {
-        float: none;
-        width: 100%;
-        height: 300px;
-        height: auto;
-        margin-top: 20px;
-        margin-bottom: 0px;
-    }
-    .tabdetails .tabcontent {
-        width: 100%;
-        float: none;
-        margin-left: 0;
-    }
+.mr-bottom {
+    margin-bottom: 30px !important;
 }

@@ -15,7 +15,7 @@ const routes: Routes = [
   },
   {
     path: 'editMyProfile',
-    component: EditMyProfileComponent,
+    loadChildren: () => import('../user-profile/edit-my-profile/edit-my-profile.module').then(m => m.EditMyProfileModule),
     data: {
       title: 'Edit My Profile'
     },

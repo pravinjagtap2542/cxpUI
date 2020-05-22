@@ -1,16 +1,18 @@
-<div class="container">
+<div class="container mr-bottom">
     <div class="row">
         <div class="col-xl-5">
             <div class="form-group">
                 <fieldset class="the-fieldset userDetailsTable">
                     <legend class="the-legend">Information</legend>
-                    <p><span>Name:</span> Dhaval Kodrani</p>
-                    <p><span>Company:</span> Infovisions Labs Pune</p>
-                    <p><span>User Name:</span> dkodrani@avaya.com</p>
-                    <p><span>User Id:</span> dkodrani</p>
-                    <p><span>User Type:</span> Avaya Associate</p>
-                    <p><span>Avaya Relationship:</span> Avaya Associate</p>
-                    <p><span>Joined:</span> 01-Mar-2018</p>
+                    <p><span>Name:</span> Ayushman IVL</p>
+                    <p><span>Company:</span> IVL</p>
+                    <p><span>Work Phone:</span> 8425047708</p>
+                    <p><span>Location:</span> India</p>
+                    <p><span>User Name:</span> ayushman.katare@ivlglobal.com</p>
+                    <p><span>User Id:</span> aivl</p>
+                    <p><span>User Type:</span> User</p>
+                    <p><span>Avaya Relationship:</span> No Relationship</p>
+                    <p><span>Joined:</span> 08-Apr-2020</p>
                 </fieldset>
             </div>
         </div>
@@ -18,74 +20,24 @@
             <div class="form-group tab">
                 <fieldset class="the-fieldset userDetailsTable">
                     <legend class="the-legend">Tool Box</legend>
-                    <button class="tablinks" (click)="changeTab($event, 'editContactInformation')" id="defaultOpen"><i class="fa fa-check" aria-hidden="true"></i>
+                    <a [ngClass]="editContactInformation.isActive ? 'activeTab':''" [routerLinkActive]="['']" #editContactInformation="routerLinkActive" [routerLinkActiveOptions]="{exact: true}" routerLink="/userProfile/editMyProfile/editContactInformation" class="tablinks"
+                        id="defaultOpen"><i class="fa fa-check" aria-hidden="true"></i>
                         Edit Contact Information
-                    </button>
-                    <button class="tablinks" (click)="changeTab($event, 'editAddressInformation')"><i class="fa fa-check" aria-hidden="true"></i>Edit Address Information</button>
-                    <button class="tablinks" (click)="changeTab($event, 'viewRequestRoles')"><i class="fa fa-check" aria-hidden="true"></i>View/Request Roles</button>
-                    <button class="tablinks" (click)="changeTab($event, 'requestUserType')"><i class="fa fa-check" aria-hidden="true"></i>Request User Type</button>
-                    <button class="tablinks" (click)="changeTab($event, 'requestUserAccessType')"><i class="fa fa-check" aria-hidden="true"></i>Request User Access Type</button>
-                    <button class="tablinks" (click)="changeTab($event, 'changePassword')"><i class="fa fa-check" aria-hidden="true"></i>Change Password</button>
-                    <button class="tablinks" (click)="changeTab($event, 'changeSecurityQuestion')"><i class="fa fa-check" aria-hidden="true"></i>Change Security Question</button>
-                    <button class="tablinks" (click)="changeTab($event, 'enrollForApplications')"><i class="fa fa-check" aria-hidden="true"></i>Enroll for Applications</button>
-                    <button class="tablinks" (click)="changeTab($event, 'editPreference')"><i class="fa fa-check" aria-hidden="true"></i>Edit Preference</button>
-                    <button class="tablinks" (click)="changeTab($event, 'acceptedEULA')"><i class="fa fa-check" aria-hidden="true"></i>Accepted EULA</button>
+                    </a>
+                    <a class="tablinks" [ngClass]="editAddressInformation.isActive ? 'activeTab':''" [routerLinkActive]="['']" #editAddressInformation="routerLinkActive" [routerLinkActiveOptions]="{exact: true}" routerLink="/userProfile/editMyProfile/editAddressInformation"><i class="fa fa-check" aria-hidden="true"></i>Edit Address Information</a>
+                    <a class="tablinks" [ngClass]="viewRequestRoles.isActive ? 'activeTab':''" [routerLinkActive]="['']" #viewRequestRoles="routerLinkActive" [routerLinkActiveOptions]="{exact: true}" routerLink="/userProfile/editMyProfile/viewRequestRoles"><i class="fa fa-check" aria-hidden="true"></i>View/Request Roles</a>
+                    <a class="tablinks" [ngClass]="requestUserType.isActive ? 'activeTab':''" [routerLinkActive]="['']" #requestUserType="routerLinkActive" [routerLinkActiveOptions]="{exact: true}" routerLink="/userProfile/editMyProfile/requestUserType"><i class="fa fa-check" aria-hidden="true"></i>Request User Type</a>
+                    <a class="tablinks" [ngClass]="requestUserAccessType.isActive ? 'activeTab':''" [routerLinkActive]="['']" #requestUserAccessType="routerLinkActive" [routerLinkActiveOptions]="{exact: true}" routerLink="/userProfile/editMyProfile/requestUserAccessType"><i class="fa fa-check" aria-hidden="true"></i>Request User Access Type</a>
+                    <a class="tablinks" [ngClass]="changePassword.isActive ? 'activeTab':''" [routerLinkActive]="['']" #changePassword="routerLinkActive" [routerLinkActiveOptions]="{exact: true}" routerLink="/userProfile/editMyProfile/changePassword"><i class="fa fa-check" aria-hidden="true"></i>Change Password</a>
+                    <a class="tablinks" [ngClass]="changeSecurityQuestion.isActive ? 'activeTab':''" [routerLinkActive]="['']" #changeSecurityQuestion="routerLinkActive" [routerLinkActiveOptions]="{exact: true}" routerLink="/userProfile/editMyProfile/changeSecurityQuestion"><i class="fa fa-check" aria-hidden="true"></i>Change Security Question</a>
+                    <a class="tablinks" [ngClass]="enrollForApplications.isActive ? 'activeTab':''" [routerLinkActive]="['']" #enrollForApplications="routerLinkActive" [routerLinkActiveOptions]="{exact: true}" routerLink="/userProfile/editMyProfile/enrollForApplications"><i class="fa fa-check" aria-hidden="true"></i>Enroll for Applications</a>
+                    <a class="tablinks" [ngClass]="editPreference.isActive ? 'activeTab':''" [routerLinkActive]="['']" #editPreference="routerLinkActive" [routerLinkActiveOptions]="{exact: true}" routerLink="/userProfile/editMyProfile/editPreference"><i class="fa fa-check" aria-hidden="true"></i>Edit Preference</a>
+                    <a class="tablinks" [ngClass]="acceptedEULA.isActive ? 'activeTab':''" [routerLinkActive]="['']" #acceptedEULA="routerLinkActive" [routerLinkActiveOptions]="{exact: true}" routerLink="/userProfile/editMyProfile/acceptedEula"><i class="fa fa-check" aria-hidden="true"></i>Accepted EULA</a>
                 </fieldset>
             </div>
 
-            <div id="editContactInformation" class="tabcontent">
-                <form action="#">
-                    <label for="fname">First Name</label>
-                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
-
-                    <label for="lname">Last Name</label>
-                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-
-                    <label for="country">Country</label>
-                    <select id="country" name="country">
-                      <option value="australia">Australia</option>
-                      <option value="canada">Canada</option>
-                      <option value="usa">USA</option>
-                    </select>
-                    <button class="formButton">Cancel</button>
-                    <button class="formButton SaveBtn">Save</button>
-                </form>
-            </div>
-
-            <div id="editAddressInformation" class="tabcontent">
-                <h3>Edit Address Information</h3>
-            </div>
-
-            <div id="viewRequestRoles" class="tabcontent">
-                <h3>View/Request Roles</h3>
-            </div>
-
-            <div id="requestUserType" class="tabcontent">
-                <h3>Request User Type</h3>
-            </div>
-
-            <div id="requestUserAccessType" class="tabcontent">
-                <h3>Request User Access Type</h3>
-            </div>
-
-            <div id="changePassword" class="tabcontent">
-                <h3>Change Password</h3>
-            </div>
-
-            <div id="changeSecurityQuestion" class="tabcontent">
-                <h3>Change Security Question</h3>
-            </div>
-
-            <div id="enrollForApplications" class="tabcontent">
-                <h3>Enroll for Applications</h3>
-            </div>
-
-            <div id="editPreference" class="tabcontent">
-                <h3>Edit Preference</h3>
-            </div>
-
-            <div id="acceptedEULA" class="tabcontent">
-                <h3>Accepted EULA</h3>
+            <div class="tabcontent">
+                <router-outlet></router-outlet>
             </div>
         </div>
     </div>

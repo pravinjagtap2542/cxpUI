@@ -1,7 +1,5 @@
 export const environment = {
   production: false,
   apiUrl: '',
-  callLocalJson: true,
+  callLocalJson: false,
 };
-
-

@@ -1,0 +1,33 @@
+<form>
+    <label for="country">Country <span class="asterik">*</span></label>
+    <select id="country" [(ngModel)]="addressInfo.country" required (change)="selectedCountryStates(addressInfo.country)" name="country">
+        <option value="undefined" selected>Select Country</option>
+        <option *ngFor="let countries of countriesList" [value]="countries.country">{{ countries.country }}</option>
+    </select>
+
+    <label for="fname">Address Line 1 <span class="asterik">*</span></label>
+    <input type="text" [(ngModel)]="addressInfo.address1" id="address1" required name="address1" placeholder="Your Address Line 1..">
+
+    <label for="lname">Address Line 2</label>
+    <input type="text" [(ngModel)]="addressInfo.address2" id="address2" name="address2" placeholder="Your Address Line 2..">
+
+    <label for="lname">City <span class="asterik">*</span></label>
+    <input type="text" [(ngModel)]="addressInfo.city" id="city" name="city" required placeholder="Your city..">
+
+    <div *ngIf="addressInfo.country">
+        <label for="lname">State</label>
+        <select id="State" [(ngModel)]="addressInfo.State" name="State">
+            <option value="undefined" selected>Select State</option>
+            <option *ngFor="let state of statesList" [value]="state">{{ state }}</option>
+        </select>
+    </div>
+
+    <label for="lname">ZIP Code/Postal Code</label>
+    <input type="text" [(ngModel)]="addressInfo.zipcode" id="zipcode" name="zipcode" placeholder="Your zip code..">
+
+    <label for="lname">Fax Number</label>
+    <input type="text" [(ngModel)]="addressInfo.fax" id="fax" name="fax" placeholder="Your fax..">
+
+    <button class="formButton">Cancel</button>
+    <button class="formButton SaveBtn">Save</button>
+</form>

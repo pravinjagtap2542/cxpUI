@@ -6,6 +6,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+
+import { HTTPInterceptor } from './shared/interceptors/http.interceptor'
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -34,6 +37,8 @@ import { ChartsModule } from 'ng2-charts';
 import { AppHeaderComponent } from './shared/app-header/app-header.component';
 import { AppFooterComponent } from './shared/app-footer/app-footer.component';
 import { AppSidebarComponent } from './shared/app-sidebar/app-sidebar.component';
+import { NgxLoadingModule } from 'ngx-loading';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
@@ -48,7 +53,11 @@ import { AppSidebarComponent } from './shared/app-sidebar/app-sidebar.component'
     PerfectScrollbarModule,
     BsDropdownModule.forRoot(),
     TabsModule.forRoot(),
-    ChartsModule
+    ChartsModule,
+    NgxLoadingModule.forRoot({}),
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   declarations: [
     AppComponent,
@@ -61,7 +70,12 @@ import { AppSidebarComponent } from './shared/app-sidebar/app-sidebar.component'
   providers: [{
     provide: LocationStrategy,
     useClass: HashLocationStrategy
-  }],
+  },
+  { provide: HTTP_INTERCEPTORS,
+    useClass: HTTPInterceptor,
+    multi: true
+  },
+],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

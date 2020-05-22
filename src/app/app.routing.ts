@@ -7,18 +7,18 @@ import { P500Component } from './views/error/500.component';
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'user-profile',
+    redirectTo: 'userProfile',
     pathMatch: 'full'
   },
   {
-    path: 'user-profile',
+    path: 'userProfile',
     loadChildren: () => import('./views/user-profile/user-profile.module').then(m => m.UserProfileModule),
     data: {
       title: 'User Profile'
     },
   },
   {
-    path: 'user-management',
+    path: 'userManagement',
     loadChildren: () => import('./views/user-management/user-management.module').then(m => m.UserManagementModule),
     data: {
       title: 'User Management'
