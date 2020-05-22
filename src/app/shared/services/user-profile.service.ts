@@ -10,6 +10,7 @@ export class UserProfileService {
 
    fetchContactInformationData = 'assets/json/fetchContactInformation.json';
    fetchUserAddressData = 'assets/json/fetchUserAddress.json';
+   fetchPreferencesData = 'assets/json/fetchPreferences.json';
 
    apiUrl = environment.apiUrl;
    public callLocalJson = environment.callLocalJson;
@@ -30,6 +31,15 @@ export class UserProfileService {
         return this.http.get<any>(`${this.fetchUserAddressData}`);
       }else{
         return this.http.get(this.apiUrl + "fetchContactInformation.json");
+      }
+    }
+
+
+    fetchPreferences(){
+      if(this.callLocalJson){
+        return this.http.get<any>(`${this.fetchPreferencesData}`);
+      }else{
+        return this.http.get(this.apiUrl + "fetchPreferences.json");
       }
     }
 }
