@@ -4,36 +4,6 @@
             <div class="form-group">
                 <fieldset class="the-fieldset userDetailsTable">
                     <legend class="the-legend">Current Sold To Information</legend>
-                    <!-- <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-sm">
-                                <div class="card mb-3">
-                                    <div class="card-header bg-red the-firstCardLegend">AVAILABLE NUMBERS
-                                        <p><span>
-                                                <label>Show Details</label>
-                                                <input type="checkbox" [(ngModel)]="isEnabled" (change)="showDetails($event)">
-                                            </span>
-                                        </p>
-                                    </div>
-                                    <div class="card-body">
-                                        <p><span>
-                                                <label>{{soldToNumbers.name}}</label>
-                                                <input type="checkbox" [(ngModel)]="isEnabled">
-                                            </span><br>
-                                            <span>
-                                                <label>{{soldToPhoneNumber}}</label><br>
-                                                <label>{{soldToLocation}}</label><br>
-                                                <label>{{soldToCompany}}</label><br>
-                                            </span>
-                                    </div>
-                                    <div class="card-footer bg-grey">
-                                        <button class="formButton SaveBtn" (click)="requestAll()">Request All</button>
-                                        <button class="requestSelectonbtn">Request Selection</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
                     <form>
                         <div class="row">
                             <div class="col-sm-6">
@@ -68,7 +38,7 @@
                                     <div class="card-header bg-red the-firstCardLegend">YOUR NUMBERS
                                         <p><span>
                                                 <label>Show Details</label>
-                                                <input type="checkbox" (change)="showNumbers($event)">
+                                                <input type="checkbox" (change)="showNumbers($event)" [(ngModel)]="numberIsEnabled" [ngModelOptions]="{standalone: true}">
                                             </span>
                                         </p>
                                     </div>
@@ -85,10 +55,10 @@
                                     <div class="card-footer bg-grey">
                                         <div class="row">
                                             <div class="col-sm-3">
-                                                <button class="formButton">Request</button>
+                                                <button class="formButton" (click)="requestNumbers()">Request</button>
                                             </div>
                                             <div class="col-sm-3">
-                                                <button class="formButton">Remove</button>
+                                                <button class="formButton" (click)="removeNumbers()">Remove</button>
                                             </div>
                                             <div class="col-sm-3">
                                                 <button class="formButton">Make</button>

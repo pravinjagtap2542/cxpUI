@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UserProfileRoutingModule } from './user-profile-routing.module';
 
 import { ManageMySoldTosComponent } from './manage-my-sold-tos/manage-my-sold-tos.component';
@@ -13,6 +13,7 @@ import { PushNotificationsComponent } from './push-notifications/push-notificati
   imports: [
     CommonModule,
     FormsModule,
+    ReactiveFormsModule,
     UserProfileRoutingModule
   ],
 })

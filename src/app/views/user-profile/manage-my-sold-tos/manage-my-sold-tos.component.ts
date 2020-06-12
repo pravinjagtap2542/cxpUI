@@ -104,9 +104,28 @@ export class ManageMySoldTosComponent implements OnInit {
     }
 
     this.service.postAllRequestedNumbers(obj).subscribe(data =>{
-      console.log(data);
+      if(data.status == 200){
+        console.log("Notification added successfully");
+      }
+      else{
+        
+      }
     })
 
+  }
+
+  //Function of request numbers button---
+
+  requestNumbers(){
+    this.numberIsEnabled = true;
+  }
+
+  //Function of remove numbers button--
+
+  removeNumbers(){
+    this.numberLocation = "";
+    this.numberCompany = "";
+    this.numberIsEnabled = false
   }
 
 }

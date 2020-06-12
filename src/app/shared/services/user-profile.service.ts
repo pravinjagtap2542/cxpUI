@@ -67,8 +67,13 @@ export class UserProfileService {
 
     //Api call to post all requested soldTo numbers--
     postAllRequestedNumbers(obj) : Observable<any>{
-      console.log(obj);
     return this.http.post("requestAll" , obj);
+  }
+
+  //Api call to post enotifications--
+
+  postEnotification(notificationObj): Observable<any>{
+    return this.http.post("sendNotification" , notificationObj);
   }
    
 
