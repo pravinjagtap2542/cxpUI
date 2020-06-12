@@ -1,0 +1,213 @@
+.the-legend {
+    border-style: none;
+    border-width: 0;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 0;
+    width: auto;
+    padding: 0 10px;
+    border: 1px solid #d11a0d;
+    background: #d11a0d;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+
+.the-fieldset {
+    border: 2px solid red;
+    padding: 10px;
+}
+
+
+
+// fieldset.the-fieldset.userDetailsTable p {
+//     color: #000;
+// }
+
+// fieldset.the-fieldset.userDetailsTable p span {
+//     color: white;
+// }
+
+
+/* Style the tab */
+
+.tab {
+    float: left;
+    // border: 1px solid #ccc;
+    // background-color: #f1f1f1;
+    width: 30%;
+    height: 300px;
+}
+
+
+/* Style the buttons inside the tab */
+
+.tab a {
+    display: block;
+    background-color: inherit;
+    color: grey;
+    // padding: 22px 16px;
+    padding: 15px 8px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 13px;
+    font-weight: 500;
+    // font-style: italic;
+}
+
+
+/* Change background color of buttons on hover */
+
+.tab a:hover {
+    background-color: #ddd;
+}
+
+
+/* Create an active/current "tab button" class */
+
+.activeTab {
+    background-color: grey !important;
+    color: #fff !important;
+    font-style: italic !important;
+}
+
+
+/* Style the tab content */
+
+.tabcontent {
+    float: left;
+    padding: 15px 12px;
+    // border: 1px solid #ccc;
+    // width: 70%;
+    border-left: none;
+    height: auto;
+    width: 68%;
+    margin-left: 2%;
+}
+
+.form-group,
+.the-fieldset {
+    height: 100%;
+    width: 130%;
+}
+
+i.fa.fa-check {
+    /* font-size: 13px; */
+    margin-right: 4px;
+    color: #d11a0d;
+}
+.tabdetails {
+    .the-fieldset {
+        padding: 10px 0;
+    }
+    legend.the-legend {
+        margin: 0px 10px;
+    }
+}
+.tab a.active i.fa.fa-check {
+    color: #ffffff;
+}
+
+@media only screen and (max-width: 1199px) {
+    .tabdetails {
+        margin: 15px 0;
+    }
+}
+
+@media only screen and (max-width: 410px) {
+    .tabdetails {
+        margin: 0px 0;
+        margin-bottom: 20px;
+    }
+    .tab {
+        float: none;
+        width: 100%;
+        height: 300px;
+        height: auto;
+        margin-top: 20px;
+        margin-bottom: 0px;
+    }
+    .tabdetails .tabcontent {
+        width: 100%;
+        float: none;
+        margin-left: 0;
+    }
+    .form-group,
+.the-fieldset {
+    height: 100%;
+}
+
+
+}
+
+.mr-bottom {
+    margin-bottom: 30px !important;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    max-width: 300px;
+    // transition: 0.3s;
+    border-radius: 5px; /* 5px rounded corners */
+  }
+
+
+  //Style for first card--
+
+  .the-firstCard{
+    border: 2px solid grey;
+    padding: 10px;
+    border-radius: 3px; /* 5px rounded corners */
+}
+
+  .header {
+    overflow: hidden;
+    background-color: red;
+    padding: 20px 10px;
+  }
+
+  .footer{
+    overflow: hidden;
+    background-color: grey;
+    padding: 20px 10px;
+  }
+
+  .bg-red{
+    background-color: #d11a0d;
+  }
+
+  .bg-grey{
+    background-color: #d8dbe0;
+  }
+
+  .the-firstCardLegend {
+    font-size: 14px;
+    background: #d11a0d;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.formButton.SaveBtn {
+    background-color: #d11a0d;
+    border-color: #d11a0d;
+}
+
+.formButton {
+    background: #5d5d5d;
+    border: none;
+    color: #fff;
+    padding: 4px 10px;
+    margin-top: 12px;
+}
+.requestSelectonbtn{
+    background: #5d5d5d;
+    border: none;
+    color: #fff;
+    padding: 4px 10px;
+    margin-top: 12px;
+    margin-left: 35px;
+}
