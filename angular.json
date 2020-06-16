@@ -21,6 +21,7 @@
               "src/vendors"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "node_modules/@coreui/icons/css/coreui-icons.css",
               "node_modules/flag-icon-css/css/flag-icon.css",
@@ -37,7 +38,8 @@
               "node_modules/chart.js/dist/Chart.min.js",
               "src/vendors/@coreui/icons/js/svgxuse.min.js",
               "src/vendors/@coreui/coreui/js/coreui.bundle.min.js",
-              "node_modules/jquery/dist/jquery.min.js"
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
             ]
           },
           "configurations": {

@@ -20,13 +20,13 @@
 
 
 
-fieldset.the-fieldset.userDetailsTable p {
-    color: #000;
-}
+// fieldset.the-fieldset.userDetailsTable p {
+//     color: #000;
+// }
 
-fieldset.the-fieldset.userDetailsTable p span {
-    color: white;
-}
+// fieldset.the-fieldset.userDetailsTable p span {
+//     color: white;
+// }
 
 
 /* Style the tab */
@@ -92,7 +92,7 @@ fieldset.the-fieldset.userDetailsTable p span {
 .form-group,
 .the-fieldset {
     height: 100%;
-    width: 130%;
+    // width: 130%;
 }
 
 i.fa.fa-check {
@@ -148,10 +148,54 @@ i.fa.fa-check {
     margin-bottom: 30px !important;
 }
 
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    // max-width: 300px;
+    // transition: 0.3s;
+    border-radius: 5px; /* 5px rounded corners */
+    height: 100%;
+    text-overflow: inherit;
+  }
+
+
+  //Style for first card--
+
+  .the-firstCard{
+    border: 2px solid grey;
+    padding: 10px;
+    border-radius: 3px; /* 5px rounded corners */
+}
+
+  .header {
+    overflow: hidden;
+    background-color: red;
+    padding: 20px 10px;
+  }
+
+  .footer{
+    overflow: hidden;
+    background-color: grey;
+    padding: 20px 10px;
+  }
+
+  .bg-red{
+    background-color: #d11a0d;
+  }
+
+  .bg-grey{
+    background-color: #d8dbe0;
+  }
+
+  .the-firstCardLegend {
+    font-size: 14px;
+    background: #d11a0d;
+    color: #fff;
+    text-transform: uppercase;
+}
+
 .formButton.SaveBtn {
     background-color: #d11a0d;
     border-color: #d11a0d;
-    margin-left: 10px;
 }
 
 .formButton {
@@ -161,12 +205,11 @@ i.fa.fa-check {
     padding: 4px 10px;
     margin-top: 12px;
 }
-
-.buttonAlign{
-    margin-left: 38%;
-    margin-top: 10px;
-}
-
-.fieldAlign{
-    margin-left: 10%;
+.requestSelectonbtn{
+    background: #5d5d5d;
+    border: none;
+    color: #fff;
+    padding: 4px 10px;
+    margin-top: 12px;
+    margin-left: 35px;
 }

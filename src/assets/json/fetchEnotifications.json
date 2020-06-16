@@ -1,0 +1,14 @@
+
+{
+    "notifications":[
+        {
+            "name": "Security Advisories",
+            "IsEnabled": false
+        },
+        {
+            "name": "Product Support",
+            "IsEnabled": false
+        }
+    ]
+
+}

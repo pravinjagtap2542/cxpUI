@@ -8,49 +8,86 @@ import { UserProfileService } from '../../../shared/services/user-profile.servic
   styleUrls: ['./e-notifications.component.scss']
 })
 export class ENotificationsComponent implements OnInit {
-  public eNotificationFormGroup: FormGroup;
+  public eNotificationValue: [];
+  public numbers;
+  public name;
+  public numberCheckboxChecked;
+  public numberName;
+  public numberLocation;
+  public numberCompany;
+  public numberIsEnabled;
 
-  constructor( private formbuilder: FormBuilder,
-              private service:UserProfileService) { }
+  constructor(private service: UserProfileService) { }
 
   ngOnInit(): void {
-    //Form initialization--
-    this.eNotificationFormGroup = this.formbuilder.group({
-      address: [''],
-      subject: ['',],
-      message:[''],
-      customerChecked:[false],
-      noRelationshipChecked:[false],
-      partnerChecked:[false]
-  })
+    this.getEnotifications();
+    this.fetchNumbers();
   }
 
-  //Function on cancel button click to reset the form-- 
-  cancelNotification(){
-    this.eNotificationFormGroup.reset();
+
+  //Function to bind enotifications--
+
+  getEnotifications() {
+    this.service.fetchEnotifications().subscribe(
+      response => {
+        this.eNotificationValue = response.notifications;
+      }, error => {
+        this.eNotificationValue = []
+      }, () => {
+      }
+    );
   }
 
-  //Function on submit button click--
 
-  saveNotification(){
-    let notificationObj ={
-      "fromAddress" : this.eNotificationFormGroup.value.address != null ? this.eNotificationFormGroup.value.address : "",
-      "subject" : this.eNotificationFormGroup.value.subject != null ? this.eNotificationFormGroup.value.subject : "",
-      "message": this.eNotificationFormGroup.value.message != null ? this.eNotificationFormGroup.value.message : "",
-      "isCustomer" : this.eNotificationFormGroup.value.customerChecked != false ? this.eNotificationFormGroup.value.customerChecked : false,
-      "isNoRelationship": this.eNotificationFormGroup.value.noRelationshipChecked !=false ? this.eNotificationFormGroup.value.noRelationshipChecked : false,
-      "isPartner": this.eNotificationFormGroup.value.partnerChecked !=false ? this.eNotificationFormGroup.value.partnerChecked: false
-    }
-    this.service.postEnotification(notificationObj).subscribe(data =>{
-     if(data.status == 200){
-       console.log("Notification added successfully");
-     }
+  //Function call to bind numbers--
+
+  fetchNumbers() {
+    this.service.fetchNumbers().subscribe(
+      response => {
+        this.numbers = response.numbersInfo;
+        this.name = this.numbers.name;
+      }, error => {
+        this.numbers = {}
+      }, () => {
+
+      }
+    );
+  }
+
+    //Function call to show numbers details on chcekbox click--
+    showNumbers(event){
+      this.numberCheckboxChecked = event.target.checked;
+      if(this.numberCheckboxChecked == true){
+        this.numberLocation = this.numbers.location;
+        this.numberCompany = this.numbers.company;
+        this.numberIsEnabled = this.numbers.IsEnabled
+      }
      else{
-
+      this.numberLocation = "";
+      this.numberCompany = "";
+      this.numberIsEnabled = false
      }
-     
-    })
-  }
- 
+    }
+
+    removeNumbers(){
+      this.numberLocation = "";
+      this.numberCompany = "";
+      this.numberIsEnabled = false
+    }
+
+    //Function call to update notification--
+
+    updateNotifications(){
+      let notifications =[];
+      for(var i=0;i<this.eNotificationValue.length;i++){
+        console.log(this.eNotificationValue[i]);
+        let obj: any = {};
+        // obj.name = this.eNotificationValue[i].name;
+        // obj.Operation = this.entityList[i].Operation[j].operation;
+        // privileges.push(obj);
+      }
+    }
+
+
 
 }

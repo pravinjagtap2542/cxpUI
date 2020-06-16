@@ -1,1 +1,63 @@
-<p>push-notifications works!</p>
+<div class="container-fluid">
+    <div class="form-group">
+        <fieldset class="the-fieldset">
+            <legend class="the-legend">E-NOTIFICATIONS</legend>
+            <form>
+                <div class="row">
+                    <div class="col-xl-12 col-md-12">
+                        <span class="fieldAlign">(To associate Link id with Compay id,Please fill out the below
+                            information)</span>
+                        <form [formGroup]="eNotificationFormGroup" class="needs-validation" novalidate>
+                            <div class="form-row fieldAlign">
+                                <div class="col-md-3 mb-3">
+                                    <label>Customer</label>
+                                    <input type="checkbox" formControlName="customerChecked">
+                                </div>
+    
+                                <div class="col-md-3 mb-3">
+                                    <label>No Relationship</label>
+                                    <input type="checkbox" formControlName="noRelationshipChecked">
+                                </div>
+    
+                                <div class="col-md-3 mb-3">
+                                    <label>Partner</label>
+                                    <input type="checkbox" formControlName="partnerChecked">
+                                </div>
+    
+                            </div>
+    
+                            <div class="form-row fieldAlign">
+                                <div class="col-md-10 mb-10">
+                                    <label for="validationTooltip01">From Address</label>
+                                    <input type="text" class="form-control" id="validationTooltip01"
+                                        placeholder="Enter Address" formControlName="address">
+                                </div>
+                            </div>
+    
+                            <div class="form-row fieldAlign">
+                                <div class="col-md-10 mb-10">
+                                    <label for="validationTooltip01">Subject</label>
+                                    <input type="text" class="form-control" id="validationTooltip01"
+                                        placeholder="Enter Subject" formControlName="subject">
+                                </div>
+                            </div>
+                            <div class="form-row fieldAlign">
+                                <div class="col-md-10 mb-10">
+                                    <label for="validationTooltip01">Message</label>
+                                    <textarea class="form-control" id="validationTooltip01" placeholder="Enter Messsage"
+                                        rows="5" cols="33" formControlName="message"></textarea>
+                                </div>
+                            </div>
+    
+                            <div class="form-row buttonAlign">
+                                <button class="formButton" (click)="cancelNotification()">Cancel</button>
+                                <button class="formButton SaveBtn" (click)="saveNotification()">Save</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </form>
+        </fieldset>
+    </div>
+
+</div>

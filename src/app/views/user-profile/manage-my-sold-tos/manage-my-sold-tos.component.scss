@@ -92,7 +92,7 @@
 .form-group,
 .the-fieldset {
     height: 100%;
-    width: 130%;
+    // width: 130%;
 }
 
 i.fa.fa-check {
@@ -150,9 +150,11 @@ i.fa.fa-check {
 
 .card {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    max-width: 300px;
+    // max-width: 300px;
     // transition: 0.3s;
     border-radius: 5px; /* 5px rounded corners */
+    height: 100%;
+    text-overflow: inherit;
   }
 
 
@@ -188,7 +190,7 @@ i.fa.fa-check {
     font-size: 14px;
     background: #d11a0d;
     color: #fff;
-    text-transform: uppercase;
+    // text-transform: uppercase;
 }
 
 .formButton.SaveBtn {

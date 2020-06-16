@@ -95,6 +95,11 @@ export class ManageMySoldTosComponent implements OnInit {
 
   requestAll(){
     this.isEnabled = true
+  }
+
+  //Function call on request selection button click--
+
+  requestSelection(){
     let obj = {
       "name": this.soldToNumbers.name,
       "phoneNumber": this.soldToPhoneNumber,
@@ -111,7 +116,6 @@ export class ManageMySoldTosComponent implements OnInit {
         
       }
     })
-
   }
 
   //Function of request numbers button---
